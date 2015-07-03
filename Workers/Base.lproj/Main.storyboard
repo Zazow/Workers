@@ -172,15 +172,16 @@
             </objects>
             <point key="canvasLocation" x="324" y="399"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="3ZQ-Ys-ZIX">
             <objects>
-                <viewController id="N6i-D3-8EA" sceneMemberID="viewController">
+                <viewController title="Settings" id="N6i-D3-8EA" customClass="UITBC_SeekerHomePages" customModule="Workers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="19b-Ng-uTw"/>
                         <viewControllerLayoutGuide type="bottom" id="I0c-fF-uHN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XTI-Td-SE6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -191,10 +192,10 @@
             </objects>
             <point key="canvasLocation" x="1966.5" y="107"/>
         </scene>
-        <!--Item 2-->
+        <!--New Request-->
         <scene sceneID="fe4-5r-m1C">
             <objects>
-                <viewController id="7zH-cj-3DX" customClass="UITBC_SeekerHomePages" customModule="Workers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="New Request" id="7zH-cj-3DX" customClass="UITBC_SeekerHomePages" customModule="Workers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t9O-Ar-fxW"/>
                         <viewControllerLayoutGuide type="bottom" id="0kA-06-3dB"/>
@@ -210,10 +211,10 @@
             </objects>
             <point key="canvasLocation" x="2725.5" y="-322"/>
         </scene>
-        <!--Item 1-->
+        <!--Timeline-->
         <scene sceneID="HIO-og-PZc">
             <objects>
-                <viewController id="Pkd-KD-dtt" customClass="UITBC_SeekerHomePages" customModule="Workers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Timeline" id="Pkd-KD-dtt" customClass="UITBC_SeekerHomePages" customModule="Workers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gmr-1r-DHS"/>
                         <viewControllerLayoutGuide type="bottom" id="Bgj-S3-7bT"/>
