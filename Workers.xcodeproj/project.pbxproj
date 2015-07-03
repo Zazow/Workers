@@ -31,6 +31,7 @@
 		89AEB0841B4608200059BD9A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 89AEB0831B4608200059BD9A /* libz.dylib */; };
 		89AEB0861B46082A0059BD9A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 89AEB0851B46082A0059BD9A /* libsqlite3.dylib */; };
 		89E3DA211B4712E90045DDC5 /* UIVC_RegistrationPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3DA201B4712E90045DDC5 /* UIVC_RegistrationPage1.swift */; };
+		89E3DA231B4714260045DDC5 /* UIVC_RegistrationPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3DA221B4714260045DDC5 /* UIVC_RegistrationPage2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		89AEB0831B4608200059BD9A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		89AEB0851B46082A0059BD9A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		89E3DA201B4712E90045DDC5 /* UIVC_RegistrationPage1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVC_RegistrationPage1.swift; sourceTree = "<group>"; };
+		89E3DA221B4714260045DDC5 /* UIVC_RegistrationPage2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVC_RegistrationPage2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				89503E311B4604FA00A310C1 /* AppDelegate.swift */,
 				89503E331B4604FA00A310C1 /* ViewController.swift */,
 				89E3DA201B4712E90045DDC5 /* UIVC_RegistrationPage1.swift */,
+				89E3DA221B4714260045DDC5 /* UIVC_RegistrationPage2.swift */,
 				89503E351B4604FA00A310C1 /* Main.storyboard */,
 				89503E381B4604FA00A310C1 /* Images.xcassets */,
 				89503E3A1B4604FA00A310C1 /* LaunchScreen.xib */,
@@ -282,6 +285,7 @@
 				89503E341B4604FA00A310C1 /* ViewController.swift in Sources */,
 				89E3DA211B4712E90045DDC5 /* UIVC_RegistrationPage1.swift in Sources */,
 				89503E321B4604FA00A310C1 /* AppDelegate.swift in Sources */,
+				89E3DA231B4714260045DDC5 /* UIVC_RegistrationPage2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

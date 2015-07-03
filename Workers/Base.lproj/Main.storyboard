@@ -181,13 +181,31 @@
                         <viewControllerLayoutGuide type="bottom" id="2K8-GW-Kgk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xWK-iE-au1" customClass="UIVC_">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PMD-pM-0z7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1026" y="279"/>
+            <point key="canvasLocation" x="999" y="816"/>
+        </scene>
+        <!--Registration Page2-->
+        <scene sceneID="SKa-iF-vGQ">
+            <objects>
+                <viewController id="AJB-Ua-P4N" customClass="UIVC_RegistrationPage2" customModule="Workers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vPm-bp-63D"/>
+                        <viewControllerLayoutGuide type="bottom" id="mD5-Yd-2MK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UO9-YH-hjh">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lNz-21-34x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1617" y="816"/>
         </scene>
     </scenes>
 </document>
