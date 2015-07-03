@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -140,13 +141,13 @@
                                 <exclude reference="K09-Pc-wQg"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Cr6-Me-8bP"/>
-                                <exclude reference="ir0-k9-79d"/>
+                                <exclude reference="Ipr-Bm-R8p"/>
                                 <exclude reference="5Fh-9l-tLa"/>
                                 <exclude reference="JcM-Dc-9dc"/>
+                                <exclude reference="Cr6-Me-8bP"/>
+                                <exclude reference="ir0-k9-79d"/>
                                 <exclude reference="J4r-KE-ac3"/>
                                 <exclude reference="jgQ-RV-RD5"/>
-                                <exclude reference="Ipr-Bm-R8p"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -156,13 +157,13 @@
                                 <include reference="K09-Pc-wQg"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Cr6-Me-8bP"/>
-                                <include reference="ir0-k9-79d"/>
+                                <include reference="Ipr-Bm-R8p"/>
                                 <include reference="5Fh-9l-tLa"/>
                                 <include reference="JcM-Dc-9dc"/>
+                                <include reference="Cr6-Me-8bP"/>
+                                <include reference="ir0-k9-79d"/>
                                 <include reference="J4r-KE-ac3"/>
                                 <include reference="jgQ-RV-RD5"/>
-                                <include reference="Ipr-Bm-R8p"/>
                             </mask>
                         </variation>
                     </view>
@@ -170,6 +171,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="324" y="399"/>
+        </scene>
+        <!--Registration Page1-->
+        <scene sceneID="dSU-O5-xwS">
+            <objects>
+                <viewController id="6dt-Wz-QuR" customClass="UIVC_RegistrationPage1" customModule="Workers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oph-nY-IUZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="2K8-GW-Kgk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xWK-iE-au1" customClass="UIVC_">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PMD-pM-0z7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026" y="279"/>
         </scene>
     </scenes>
 </document>
