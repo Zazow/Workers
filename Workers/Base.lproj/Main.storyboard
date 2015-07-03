@@ -172,6 +172,25 @@
             </objects>
             <point key="canvasLocation" x="324" y="399"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="3ZQ-Ys-ZIX">
+            <objects>
+                <viewController id="N6i-D3-8EA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="19b-Ng-uTw"/>
+                        <viewControllerLayoutGuide type="bottom" id="I0c-fF-uHN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XTI-Td-SE6">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="EpS-Zp-ts7"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XKi-sO-qbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1966.5" y="107"/>
+        </scene>
         <!--Item 2-->
         <scene sceneID="fe4-5r-m1C">
             <objects>
@@ -181,6 +200,7 @@
                         <viewControllerLayoutGuide type="bottom" id="0kA-06-3dB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Iwt-jr-HBY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -188,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xzV-K3-aFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2227.5" y="75"/>
+            <point key="canvasLocation" x="2725.5" y="-322"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="HIO-og-PZc">
@@ -199,6 +219,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Bgj-S3-7bT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MHK-Qj-pm9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -206,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJt-fv-vit" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2227.5" y="-587"/>
+            <point key="canvasLocation" x="1966.5" y="-913"/>
         </scene>
         <!--Seeker Home Pages-->
         <scene sceneID="Bq5-k8-iaP">
@@ -221,11 +242,12 @@
                     <connections>
                         <segue destination="Pkd-KD-dtt" kind="relationship" relationship="viewControllers" id="Sqd-ci-EsD"/>
                         <segue destination="7zH-cj-3DX" kind="relationship" relationship="viewControllers" id="Anq-Hh-6ql"/>
+                        <segue destination="N6i-D3-8EA" kind="relationship" relationship="viewControllers" id="v1l-XB-UjK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLx-pc-hbs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1297.5" y="-256"/>
+            <point key="canvasLocation" x="1204.5" y="-322"/>
         </scene>
         <!--Registration Page1-->
         <scene sceneID="dSU-O5-xwS">
