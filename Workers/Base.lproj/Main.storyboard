@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sgx-bc-URX">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -595,6 +595,128 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJx-2R-FvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2577" y="-353"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Iqd-qF-xuY">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewControllerSType" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="1zc-Mp-mZ1" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="100"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ff8-eN-5vj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3285" y="-576"/>
+        </scene>
+        <!--Content View ControllerS Type-->
+        <scene sceneID="0vu-QB-tpS">
+            <objects>
+                <viewController storyboardIdentifier="ContentViewControllerSType" id="nu2-AO-yQx" customClass="UIVC_ContentViewControllerSType" customModule="Workers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i43-Y5-EJt"/>
+                        <viewControllerLayoutGuide type="bottom" id="FOn-zc-uHM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mTG-OE-SjZ">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RVz-Gn-ZYY">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1Yc-W9-sPD"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1Yc-W9-sPD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="1Yc-W9-sPD"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxA-SD-fse">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="gMW-mU-eN4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gMW-mU-eN4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="gMW-mU-eN4"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.91831597222222228" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dxA-SD-fse" firstAttribute="trailing" secondItem="mTG-OE-SjZ" secondAttribute="trailingMargin" id="6Ba-8j-mhg"/>
+                            <constraint firstItem="dxA-SD-fse" firstAttribute="leading" secondItem="RVz-Gn-ZYY" secondAttribute="trailing" constant="8" symbolic="YES" id="8hh-xR-MzY"/>
+                            <constraint firstItem="RVz-Gn-ZYY" firstAttribute="leading" secondItem="mTG-OE-SjZ" secondAttribute="leading" id="Bz7-2g-PiP"/>
+                            <constraint firstItem="FOn-zc-uHM" firstAttribute="top" secondItem="dxA-SD-fse" secondAttribute="bottom" constant="40" id="I5V-Pv-DWW"/>
+                            <constraint firstItem="RVz-Gn-ZYY" firstAttribute="bottom" secondItem="FOn-zc-uHM" secondAttribute="top" id="JCP-If-peh"/>
+                            <constraint firstItem="dxA-SD-fse" firstAttribute="centerY" secondItem="RVz-Gn-ZYY" secondAttribute="centerY" id="MyL-3P-oY0"/>
+                            <constraint firstItem="dxA-SD-fse" firstAttribute="trailing" secondItem="mTG-OE-SjZ" secondAttribute="trailingMargin" id="S1W-uv-dd4"/>
+                            <constraint firstItem="dxA-SD-fse" firstAttribute="top" secondItem="i43-Y5-EJt" secondAttribute="bottom" id="W9f-B4-eiD"/>
+                            <constraint firstItem="dxA-SD-fse" firstAttribute="leading" secondItem="RVz-Gn-ZYY" secondAttribute="trailing" constant="8" symbolic="YES" id="gI1-Aw-HnG"/>
+                            <constraint firstItem="RVz-Gn-ZYY" firstAttribute="top" secondItem="mTG-OE-SjZ" secondAttribute="top" id="hjo-J2-aAa"/>
+                            <constraint firstItem="dxA-SD-fse" firstAttribute="top" secondItem="i43-Y5-EJt" secondAttribute="bottom" constant="19" id="vYC-yW-9Q1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="RVz-Gn-ZYY"/>
+                                <exclude reference="dxA-SD-fse"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Bz7-2g-PiP"/>
+                                <exclude reference="JCP-If-peh"/>
+                                <exclude reference="hjo-J2-aAa"/>
+                                <exclude reference="I5V-Pv-DWW"/>
+                                <exclude reference="6Ba-8j-mhg"/>
+                                <exclude reference="8hh-xR-MzY"/>
+                                <exclude reference="MyL-3P-oY0"/>
+                                <exclude reference="S1W-uv-dd4"/>
+                                <exclude reference="W9f-B4-eiD"/>
+                                <exclude reference="gI1-Aw-HnG"/>
+                                <exclude reference="vYC-yW-9Q1"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="RVz-Gn-ZYY"/>
+                                <include reference="dxA-SD-fse"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Bz7-2g-PiP"/>
+                                <include reference="JCP-If-peh"/>
+                                <include reference="hjo-J2-aAa"/>
+                                <exclude reference="I5V-Pv-DWW"/>
+                                <exclude reference="6Ba-8j-mhg"/>
+                                <include reference="8hh-xR-MzY"/>
+                                <include reference="MyL-3P-oY0"/>
+                                <include reference="S1W-uv-dd4"/>
+                                <include reference="W9f-B4-eiD"/>
+                                <exclude reference="gI1-Aw-HnG"/>
+                                <exclude reference="vYC-yW-9Q1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="100"/>
+                    <connections>
+                        <outlet property="STypeImage" destination="RVz-Gn-ZYY" id="pN4-rx-lCg"/>
+                        <outlet property="STypeLabel" destination="dxA-SD-fse" id="9Te-YW-hQc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mgo-pd-FlK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3285" y="-426"/>
         </scene>
         <!--Settings-->
         <scene sceneID="98W-FT-CsL">
