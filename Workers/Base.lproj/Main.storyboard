@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -576,6 +576,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PMD-pM-0z7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="999" y="816"/>
+        </scene>
+        <!--New Request-->
+        <scene sceneID="FZe-kJ-zYK">
+            <objects>
+                <viewController title="New Request" id="2hS-ec-Rxl" customClass="UIVC_SeekerNewRequestPage" customModule="Workers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NX9-jo-n6F"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Yc-as-h6H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j9C-YT-6ri">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="New Request" id="Arb-5E-G55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJx-2R-FvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2577" y="-353"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="98W-FT-CsL">
+            <objects>
+                <viewController title="Settings" id="npp-Jz-Jna" customClass="UIVC_SeekerSettingsPage" customModule="Workers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q6R-eX-svi"/>
+                        <viewControllerLayoutGuide type="bottom" id="hM3-RJ-NhX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jcE-4R-e9D">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="vaz-LY-BTr"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dx3-AH-9bD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2577" y="392"/>
+        </scene>
+        <!--Timeline-->
+        <scene sceneID="mOK-4j-cJE">
+            <objects>
+                <viewController title="Timeline" id="3GB-cl-ho1" customClass="UIVC_SeekerTimelinePage" customModule="Workers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PWw-Rf-6Qa"/>
+                        <viewControllerLayoutGuide type="bottom" id="V9z-R0-z0K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lqA-4h-h8Q">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Timeline" id="KMb-IW-AS1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UY6-aN-9vb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2577" y="-1030"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ZPU-hc-tHp">
+            <objects>
+                <tabBarController id="sgx-bc-URX" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="DTR-y4-BN6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3GB-cl-ho1" kind="relationship" relationship="viewControllers" id="BFz-oJ-hlv"/>
+                        <segue destination="2hS-ec-Rxl" kind="relationship" relationship="viewControllers" id="aSw-Sc-MmE"/>
+                        <segue destination="npp-Jz-Jna" kind="relationship" relationship="viewControllers" id="I8L-Ia-hGV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qwm-7v-gnB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="-353"/>
         </scene>
         <!--Registration Page2-->
         <scene sceneID="SKa-iF-vGQ">
