@@ -8,9 +8,12 @@
 
 import UIKit
 import MobileCoreServices
+import MapKit
+import CoreLocation
 
-class UIVC_SeekerNewRequestPage: UIViewController, UIPageViewControllerDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class UIVC_SeekerNewRequestPage: UIViewController, UIPageViewControllerDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
     
+    let locationManager = CLLocationManager()
     //Vars
     
     var pageViewController: UIPageViewController!
@@ -29,7 +32,9 @@ class UIVC_SeekerNewRequestPage: UIViewController, UIPageViewControllerDataSourc
     @IBOutlet weak var imageView2: UIImageView!
     @IBOutlet weak var imageView3: UIImageView!
     
+    @IBOutlet weak var userTextInput: UITextView!
     
+    @IBOutlet weak var newRequestMap: MKMapView!
     
 
     override func viewDidLoad() {
@@ -101,6 +106,7 @@ class UIVC_SeekerNewRequestPage: UIViewController, UIPageViewControllerDataSourc
                 imageInputCount++
 
     }
+    
     
     // Page View Controller Functions:
     
