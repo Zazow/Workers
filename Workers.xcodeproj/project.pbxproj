@@ -35,6 +35,7 @@
 		89AEB0861B46082A0059BD9A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 89AEB0851B46082A0059BD9A /* libsqlite3.dylib */; };
 		89E3DA211B4712E90045DDC5 /* UIVC_RegistrationPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3DA201B4712E90045DDC5 /* UIVC_RegistrationPage1.swift */; };
 		89E3DA231B4714260045DDC5 /* UIVC_RegistrationPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3DA221B4714260045DDC5 /* UIVC_RegistrationPage2.swift */; };
+		AE7664A81B49A46F00448FDD /* UIVC_WorkerSettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7664A71B49A46F00448FDD /* UIVC_WorkerSettingsPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		89AEB0851B46082A0059BD9A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		89E3DA201B4712E90045DDC5 /* UIVC_RegistrationPage1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVC_RegistrationPage1.swift; sourceTree = "<group>"; };
 		89E3DA221B4714260045DDC5 /* UIVC_RegistrationPage2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVC_RegistrationPage2.swift; sourceTree = "<group>"; };
+		AE7664A71B49A46F00448FDD /* UIVC_WorkerSettingsPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVC_WorkerSettingsPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				894534E61B48122700C6DB07 /* UIVC_SeekerSettingsPage.swift */,
 				894534E81B48124300C6DB07 /* UIVC_SeekerTimelinePage.swift */,
 				894534EA1B48126500C6DB07 /* UIVC_SeekerNewRequestPage.swift */,
+				AE7664A71B49A46F00448FDD /* UIVC_WorkerSettingsPage.swift */,
 				89503E351B4604FA00A310C1 /* Main.storyboard */,
 				89503E381B4604FA00A310C1 /* Images.xcassets */,
 				89503E3A1B4604FA00A310C1 /* LaunchScreen.xib */,
@@ -297,6 +300,7 @@
 				89E3DA211B4712E90045DDC5 /* UIVC_RegistrationPage1.swift in Sources */,
 				894534EB1B48126500C6DB07 /* UIVC_SeekerNewRequestPage.swift in Sources */,
 				89503E321B4604FA00A310C1 /* AppDelegate.swift in Sources */,
+				AE7664A81B49A46F00448FDD /* UIVC_WorkerSettingsPage.swift in Sources */,
 				89E3DA231B4714260045DDC5 /* UIVC_RegistrationPage2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
