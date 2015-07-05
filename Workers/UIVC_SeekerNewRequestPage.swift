@@ -7,19 +7,107 @@
 //
 
 import UIKit
+import MobileCoreServices
 
-class UIVC_SeekerNewRequestPage: UIViewController, UIPageViewControllerDataSource {
+class UIVC_SeekerNewRequestPage: UIViewController, UIPageViewControllerDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    //Vars
     
     var pageViewController: UIPageViewController!
     var pageTitles: NSArray!
     var pageImages: NSArray!
     
+    var newMedia: Bool?
+    
+    var imageInputCount: Int = 0
+
+    
+    
+    //Outlets
+    
+    @IBOutlet weak var imageView1: UIImageView!
+    @IBOutlet weak var imageView2: UIImageView!
+    @IBOutlet weak var imageView3: UIImageView!
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.pageTitles = NSArray(objects: "Electrician", "Plumer", "Other")
-        self.pageImages = NSArray(objects: "", "", "")
+        //Call Page View Controller
+        self.pageViewControllerViewDidLoad()
+        
+
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func useCamera(sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+        {
+            let imagePicker = UIImagePickerController()
+            
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+            imagePicker.mediaTypes = [kUTTypeImage as NSString]
+            imagePicker.allowsEditing = false
+            
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+            
+            newMedia = true
+        }
+        else
+        {
+            let alertController = UIAlertController(title: "Camera", message:"No camera found :(", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func useCameraRoll(sender: AnyObject) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.SavedPhotosAlbum) {
+            
+                let imagePicker = UIImagePickerController()
+                
+                imagePicker.delegate = self
+                imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+                imagePicker.mediaTypes = [kUTTypeImage as NSString]
+                imagePicker.allowsEditing = false
+            
+                self.presentViewController(imagePicker, animated: true, completion: nil)
+            
+                newMedia = false
+        }
+    }
+   
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject])
+    {
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        var imageViewArray = [imageView1, imageView2, imageView3]
+        
+        imageViewArray[imageInputCount].image = image
+        
+                imageInputCount++
+
+    }
+    
+    // Page View Controller Functions:
+    
+    func pageViewControllerViewDidLoad()
+    {
+        self.pageTitles = NSArray(objects: "Electrician", "Plumber", "Other")
+        self.pageImages = NSArray(objects: "Electrician.png", "", "")
         
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewControllerSType") as! UIPageViewController
         
@@ -35,15 +123,6 @@ class UIVC_SeekerNewRequestPage: UIViewController, UIPageViewControllerDataSourc
         self.addChildViewController(self.pageViewController)
         self.view.addSubview(self.pageViewController.view)
         self.pageViewController.didMoveToParentViewController(self)
-        
-        
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func viewControllerAtIndex(index: Int) -> UIVC_ContentViewControllerSType
@@ -108,6 +187,8 @@ class UIVC_SeekerNewRequestPage: UIViewController, UIPageViewControllerDataSourc
     }
 
 
+    
+    
     /*
     // MARK: - Navigation
 
