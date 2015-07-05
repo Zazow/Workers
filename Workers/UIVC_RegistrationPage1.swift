@@ -21,7 +21,8 @@ class UIVC_RegistrationPage1: UIViewController {
     @IBOutlet weak var regType: UISegmentedControl!
     @IBOutlet weak var passwordConfirmation: UITextField!
 
-    
+    var user = PFUser()
+
     @IBAction func signUp(sender: AnyObject) {
         
         // Build the terms and conditions alert
@@ -63,7 +64,7 @@ class UIVC_RegistrationPage1: UIViewController {
         
         
         //if the user is a seeker, sign him up
-        if ((userType == "Seeker") && passIsGood){
+        if (passIsGood){
             // Ensure email is lowercase
             userEmailAddress = userEmailAddress.lowercaseString
             
@@ -74,7 +75,6 @@ class UIVC_RegistrationPage1: UIViewController {
             activityIndicator.startAnimating()
             
             // Create the user
-            var user = PFUser()
             user.username = userPhoneNumber
             user.password = userPassword
             user.email = userEmailAddress
@@ -83,25 +83,32 @@ class UIVC_RegistrationPage1: UIViewController {
             user["userType"] = userType
             
             
-            user.signUpInBackgroundWithBlock {
-                (succeeded: Bool, error: NSError?) -> Void in
-                if error == nil {
-                    
-                    dispatch_async(dispatch_get_main_queue()) {
-                        self.performSegueWithIdentifier("RegSuccessful", sender: self)
-                    }
-                    
-                } else {
-                    
-                    self.activityIndicator.stopAnimating()
-                    
-                    if let message: AnyObject = error!.userInfo!["error"] {
-                        self.message.text = "\(message)"
+            if (userType == "Seeker") {
+                user.signUpInBackgroundWithBlock {
+                    (succeeded: Bool, error: NSError?) -> Void in
+                    if error == nil {
+                        
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.performSegueWithIdentifier("RegSuccessful", sender: self)
+                        }
+                        
+                    } else {
+                        
+                        self.activityIndicator.stopAnimating()
+                        
+                        if let message: AnyObject = error!.userInfo!["error"] {
+                            self.message.text = "\(message)"
+                        }
                     }
                 }
+            }else{//user is a worker.. move him to the next page
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.performSegueWithIdentifier("workerRegPage", sender: self)
+                }
+                
             }
-        }else{//the uesr is a worker, move him to the next page
-            //TODO implement worker registration
+        }else{//the password is not ok. Don't do anything
         }
         
     }
@@ -121,6 +128,15 @@ class UIVC_RegistrationPage1: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "workerRegPage"
+        {
+            if let destinationVC = segue.destinationViewController as? UIVC_RegistrationPage2{
+                destinationVC.user = user
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation
