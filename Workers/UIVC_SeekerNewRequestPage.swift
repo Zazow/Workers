@@ -24,7 +24,7 @@ class UIVC_SeekerNewRequestPage: UIViewController, UIPageViewControllerDataSourc
     
     var imageInputCount: Int = 0
 
-    
+     var dropPin = MKPointAnnotation()
     
     //Outlets
     
@@ -54,16 +54,15 @@ class UIVC_SeekerNewRequestPage: UIViewController, UIPageViewControllerDataSourc
     }
     @IBAction func longPressOnMap(sender: AnyObject) {
         
+       
         let tapPoint: CGPoint = longPressOnMapOultet.locationInView(newRequestMap)
         let touchMapCoordinate: CLLocationCoordinate2D = newRequestMap.convertPoint(tapPoint, toCoordinateFromView: newRequestMap)
         
-        var dropPin = MKPointAnnotation()
+        newRequestMap.removeAnnotation(dropPin)
         dropPin.coordinate = touchMapCoordinate
         dropPin.title = "Chosen Location"
         dropPin.subtitle = ":P"
-        
         newRequestMap.addAnnotation(dropPin)
-        
     }
     
     @IBAction func useCamera(sender: AnyObject) {
