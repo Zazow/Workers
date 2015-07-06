@@ -177,11 +177,12 @@
                         <outlet property="password" destination="zJF-dS-mOe" id="yuh-RM-tIS"/>
                         <outlet property="phoneNumber" destination="75x-Nj-044" id="apn-5o-hB1"/>
                         <segue destination="sgx-bc-URX" kind="show" identifier="signInMainView" id="TDl-UW-InJ"/>
+                        <segue destination="hDo-yH-m7t" kind="show" identifier="workerLogInPage" id="TSw-Tk-7zQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-139.5" y="484"/>
+            <point key="canvasLocation" x="-139.5" y="500"/>
         </scene>
         <!--Registration Page1-->
         <scene sceneID="dSU-O5-xwS">
@@ -736,6 +737,15 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ful-cR-xcp">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOut:" destination="0xX-VU-VQf" eventType="touchUpInside" id="ZJN-gl-MV3"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZh-BW-djJ">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -772,10 +782,12 @@
                             <constraint firstItem="A1a-oA-TUp" firstAttribute="leading" secondItem="DPk-XW-Vud" secondAttribute="leading" id="OuQ-g4-AGd"/>
                             <constraint firstItem="DPk-XW-Vud" firstAttribute="leading" secondItem="7y0-Cl-dha" secondAttribute="leadingMargin" id="OxS-HQ-pLa"/>
                             <constraint firstItem="SQ0-z2-TJn" firstAttribute="leading" secondItem="LZh-BW-djJ" secondAttribute="trailing" constant="13" id="PVr-p9-4gt"/>
+                            <constraint firstItem="GCP-q1-XeV" firstAttribute="top" secondItem="Ful-cR-xcp" secondAttribute="bottom" constant="77" id="TQZ-1r-rR1"/>
                             <constraint firstItem="10q-G1-8bN" firstAttribute="leading" secondItem="7y0-Cl-dha" secondAttribute="leading" constant="153" id="Wb4-C0-GCi"/>
                             <constraint firstItem="3cD-fS-YE2" firstAttribute="trailing" secondItem="7y0-Cl-dha" secondAttribute="trailingMargin" id="Xc2-lx-Jjj"/>
                             <constraint firstItem="LZh-BW-djJ" firstAttribute="leading" secondItem="mTw-R8-jJg" secondAttribute="leading" id="Yfo-U7-jrU"/>
                             <constraint firstItem="mTw-R8-jJg" firstAttribute="leading" secondItem="DPk-XW-Vud" secondAttribute="trailing" constant="8" symbolic="YES" id="atG-46-2RO"/>
+                            <constraint firstItem="Ful-cR-xcp" firstAttribute="leading" secondItem="7y0-Cl-dha" secondAttribute="leading" constant="161" id="b81-td-mNn"/>
                             <constraint firstItem="10q-G1-8bN" firstAttribute="top" secondItem="3cD-fS-YE2" secondAttribute="bottom" constant="96" id="dqK-NA-Q4a"/>
                             <constraint firstItem="mTw-R8-jJg" firstAttribute="top" secondItem="ZDC-C3-Gwl" secondAttribute="bottom" constant="21" id="eHt-To-iuy"/>
                             <constraint firstItem="3cD-fS-YE2" firstAttribute="top" secondItem="LZh-BW-djJ" secondAttribute="bottom" constant="78" id="j4D-yf-FPL"/>
@@ -789,6 +801,7 @@
                                 <exclude reference="3cD-fS-YE2"/>
                                 <exclude reference="A1a-oA-TUp"/>
                                 <exclude reference="mTw-R8-jJg"/>
+                                <exclude reference="Ful-cR-xcp"/>
                                 <exclude reference="LZh-BW-djJ"/>
                                 <exclude reference="SQ0-z2-TJn"/>
                             </mask>
@@ -810,6 +823,8 @@
                                 <exclude reference="PVr-p9-4gt"/>
                                 <exclude reference="Wb4-C0-GCi"/>
                                 <exclude reference="dqK-NA-Q4a"/>
+                                <exclude reference="b81-td-mNn"/>
+                                <exclude reference="TQZ-1r-rR1"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -819,6 +834,7 @@
                                 <include reference="3cD-fS-YE2"/>
                                 <include reference="A1a-oA-TUp"/>
                                 <include reference="mTw-R8-jJg"/>
+                                <include reference="Ful-cR-xcp"/>
                                 <include reference="LZh-BW-djJ"/>
                                 <include reference="SQ0-z2-TJn"/>
                             </mask>
@@ -840,6 +856,8 @@
                                 <include reference="PVr-p9-4gt"/>
                                 <include reference="Wb4-C0-GCi"/>
                                 <include reference="dqK-NA-Q4a"/>
+                                <include reference="b81-td-mNn"/>
+                                <include reference="TQZ-1r-rR1"/>
                             </mask>
                         </variation>
                     </view>
@@ -853,7 +871,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ey-YV-V1u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3507" y="1464"/>
+            <point key="canvasLocation" x="3519" y="1524"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="4Mp-hn-U9I">
@@ -911,7 +929,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mbn-YZ-XDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2577" y="1119"/>
+            <point key="canvasLocation" x="2506.5" y="1231"/>
         </scene>
         <!--Timeline-->
         <scene sceneID="mOK-4j-cJE">
@@ -1171,6 +1189,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dk9-ww-PvD"/>
+        <segue reference="TDl-UW-InJ"/>
+        <segue reference="TSw-Tk-7zQ"/>
     </inferredMetricsTieBreakers>
 </document>

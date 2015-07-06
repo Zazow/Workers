@@ -31,8 +31,18 @@ class ViewController: UIViewController {
         PFUser.logInWithUsernameInBackground(userPhoneNumber, password:userPassword) {
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.performSegueWithIdentifier("signInMainView", sender: self)
+                var userType = user?.objectForKey("userType") as! String
+                //check if user is worker or seeker
+                if (userType == "Seeker"){
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.performSegueWithIdentifier("signInMainView", sender: self)
+                    }
+                }else if (userType == "Worker"){//job type is worker
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.performSegueWithIdentifier("workerLogInPage", sender: self)
+                    }
+                }else{
+                    self.message.text = "problem with detecting type of user"
                 }
             } else {
                 self.activityIndicator.stopAnimating()

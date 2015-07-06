@@ -26,6 +26,7 @@ class UIVC_WorkerSettingsPage: UIViewController {
     
     func processViewUserInfo(){
         let user = PFUser.currentUser()
+        
         var firstName: NSString = user!.objectForKey("firstName") as! NSString
         var lastName: NSString = user!.objectForKey("lastName") as! NSString
         var fullName = "\(firstName) \(lastName)"
@@ -34,7 +35,7 @@ class UIVC_WorkerSettingsPage: UIViewController {
         //get the worker type- returns WorkerExtraInfo Class
         let workerExtraInfo: PFObject = user?.objectForKey("workerExtraInfo") as! PFObject
         
-        var workTypeArray = workerExtraInfo["workType"] as! NSArray
+        var workTypeArray = workerExtraInfo.objectForKey("workType") as! NSArray
         var workType = workTypeArray[0] as! String //grab the first job
         
         
@@ -54,6 +55,15 @@ class UIVC_WorkerSettingsPage: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func signOut(sender: AnyObject) {
+        
+        PFUser.logOut()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("VIewController") as! UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
 
