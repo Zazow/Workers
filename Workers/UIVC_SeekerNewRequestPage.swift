@@ -36,6 +36,7 @@ class UIVC_SeekerNewRequestPage: UIViewController, UIPageViewControllerDataSourc
     
     @IBOutlet weak var newRequestMap: MKMapView!
     
+    @IBOutlet var longPressOnMapOultet: UILongPressGestureRecognizer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,19 @@ class UIVC_SeekerNewRequestPage: UIViewController, UIPageViewControllerDataSourc
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func longPressOnMap(sender: AnyObject) {
+        
+        let tapPoint: CGPoint = longPressOnMapOultet.locationInView(newRequestMap)
+        let touchMapCoordinate: CLLocationCoordinate2D = newRequestMap.convertPoint(tapPoint, toCoordinateFromView: newRequestMap)
+        
+        var dropPin = MKPointAnnotation()
+        dropPin.coordinate = touchMapCoordinate
+        dropPin.title = "Chosen Location"
+        dropPin.subtitle = ":P"
+        
+        newRequestMap.addAnnotation(dropPin)
+        
     }
     
     @IBAction func useCamera(sender: AnyObject) {

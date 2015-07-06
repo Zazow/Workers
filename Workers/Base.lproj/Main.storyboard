@@ -696,6 +696,10 @@
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="avy-0M-79W">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Oxs-gS-ltL" appends="YES" id="LWK-a0-3Re"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -703,12 +707,14 @@
                             <constraint firstItem="seY-7I-mce" firstAttribute="leading" secondItem="j9C-YT-6ri" secondAttribute="leadingMargin" id="2vf-FJ-Hwe"/>
                             <constraint firstItem="seY-7I-mce" firstAttribute="bottom" secondItem="TkK-Wx-aky" secondAttribute="bottom" id="3cq-sk-thv"/>
                             <constraint firstItem="NsV-7I-vcL" firstAttribute="leading" secondItem="j9C-YT-6ri" secondAttribute="leadingMargin" id="Bbi-32-Wk3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="avy-0M-79W" secondAttribute="trailing" constant="-16" id="H4r-6s-qnW"/>
                             <constraint firstItem="r7C-l0-zG3" firstAttribute="leading" secondItem="j9C-YT-6ri" secondAttribute="leadingMargin" id="IpY-O5-EqF"/>
                             <constraint firstItem="qNZ-Vs-ImQ" firstAttribute="top" secondItem="seY-7I-mce" secondAttribute="bottom" constant="8" id="JkE-hL-yS8"/>
                             <constraint firstItem="Hzq-ST-vZR" firstAttribute="top" secondItem="NX9-jo-n6F" secondAttribute="bottom" constant="108" id="Mql-gd-1hn"/>
                             <constraint firstItem="wrO-sS-rB0" firstAttribute="trailing" secondItem="j9C-YT-6ri" secondAttribute="trailingMargin" id="N39-Cm-t7L"/>
                             <constraint firstItem="wrO-sS-rB0" firstAttribute="leading" secondItem="Hzq-ST-vZR" secondAttribute="trailing" constant="8" id="TkC-rG-lbf"/>
                             <constraint firstItem="0eY-td-Gbf" firstAttribute="top" secondItem="NsV-7I-vcL" secondAttribute="bottom" constant="8" id="Vhm-AX-3dV"/>
+                            <constraint firstItem="avy-0M-79W" firstAttribute="leading" secondItem="j9C-YT-6ri" secondAttribute="leadingMargin" constant="-16" id="W4Q-DW-JLc"/>
                             <constraint firstItem="wrO-sS-rB0" firstAttribute="top" secondItem="NX9-jo-n6F" secondAttribute="bottom" constant="108" id="Xgg-qs-bXe"/>
                             <constraint firstItem="seY-7I-mce" firstAttribute="width" secondItem="TkK-Wx-aky" secondAttribute="width" id="aKQ-xS-kWX"/>
                             <constraint firstItem="7Yc-as-h6H" firstAttribute="top" secondItem="0eY-td-Gbf" secondAttribute="bottom" constant="8" id="az4-U9-jG3"/>
@@ -765,6 +771,8 @@
                                 <exclude reference="oHy-SO-kNe"/>
                                 <exclude reference="qRg-mP-2Qi"/>
                                 <exclude reference="v6j-on-IM8"/>
+                                <exclude reference="H4r-6s-qnW"/>
+                                <exclude reference="W4Q-DW-JLc"/>
                                 <exclude reference="dK1-Xg-XMr"/>
                                 <exclude reference="uBZ-S6-mX1"/>
                                 <exclude reference="xvG-La-Puw"/>
@@ -812,8 +820,10 @@
                                 <include reference="oHy-SO-kNe"/>
                                 <include reference="qRg-mP-2Qi"/>
                                 <include reference="v6j-on-IM8"/>
-                                <include reference="dK1-Xg-XMr"/>
-                                <include reference="uBZ-S6-mX1"/>
+                                <include reference="H4r-6s-qnW"/>
+                                <include reference="W4Q-DW-JLc"/>
+                                <exclude reference="dK1-Xg-XMr"/>
+                                <exclude reference="uBZ-S6-mX1"/>
                                 <include reference="xvG-La-Puw"/>
                                 <include reference="N39-Cm-t7L"/>
                                 <include reference="TkC-rG-lbf"/>
@@ -833,11 +843,17 @@
                         <outlet property="imageView1" destination="TkK-Wx-aky" id="RiI-6n-3tK"/>
                         <outlet property="imageView2" destination="Hzq-ST-vZR" id="mBK-29-1fm"/>
                         <outlet property="imageView3" destination="wrO-sS-rB0" id="nSv-Lv-Yay"/>
+                        <outlet property="longPressOnMapOultet" destination="Oxs-gS-ltL" id="ncu-ah-8I2"/>
                         <outlet property="newRequestMap" destination="avy-0M-79W" id="oiU-nm-Ql9"/>
                         <outlet property="userTextInput" destination="qNZ-Vs-ImQ" id="L3o-XK-f27"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJx-2R-FvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Oxs-gS-ltL">
+                    <connections>
+                        <action selector="longPressOnMap:" destination="2hS-ec-Rxl" id="AON-bR-AOQ"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2577" y="-353"/>
         </scene>
@@ -861,6 +877,7 @@
                         <viewControllerLayoutGuide type="bottom" id="FOn-zc-uHM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mTG-OE-SjZ">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RVz-Gn-ZYY">
@@ -922,9 +939,6 @@
                                 <exclude reference="dxA-SD-fse"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Bz7-2g-PiP"/>
-                                <exclude reference="JCP-If-peh"/>
-                                <exclude reference="hjo-J2-aAa"/>
                                 <exclude reference="I5V-Pv-DWW"/>
                                 <exclude reference="6Ba-8j-mhg"/>
                                 <exclude reference="8hh-xR-MzY"/>
@@ -933,6 +947,9 @@
                                 <exclude reference="W9f-B4-eiD"/>
                                 <exclude reference="gI1-Aw-HnG"/>
                                 <exclude reference="vYC-yW-9Q1"/>
+                                <exclude reference="Bz7-2g-PiP"/>
+                                <exclude reference="JCP-If-peh"/>
+                                <exclude reference="hjo-J2-aAa"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -941,9 +958,6 @@
                                 <include reference="dxA-SD-fse"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Bz7-2g-PiP"/>
-                                <include reference="JCP-If-peh"/>
-                                <include reference="hjo-J2-aAa"/>
                                 <exclude reference="I5V-Pv-DWW"/>
                                 <exclude reference="6Ba-8j-mhg"/>
                                 <include reference="8hh-xR-MzY"/>
@@ -952,6 +966,9 @@
                                 <include reference="W9f-B4-eiD"/>
                                 <exclude reference="gI1-Aw-HnG"/>
                                 <exclude reference="vYC-yW-9Q1"/>
+                                <include reference="Bz7-2g-PiP"/>
+                                <include reference="JCP-If-peh"/>
+                                <include reference="hjo-J2-aAa"/>
                             </mask>
                         </variation>
                     </view>
