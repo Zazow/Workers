@@ -8,9 +8,11 @@
 
 import UIKit
 import Parse
+import MobileCoreServices
 
-class UIVC_WorkerSettingsPage: UIViewController {
+class UIVC_WorkerSettingsPage: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet var longPressOnImageOutlet: UILongPressGestureRecognizer!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userFullName: UILabel!
     @IBOutlet weak var userPhoneNumber: UILabel!
@@ -33,17 +35,17 @@ class UIVC_WorkerSettingsPage: UIViewController {
         
         
         //get the worker type- returns WorkerExtraInfo Class
-        let workerExtraInfo: PFObject = user?.objectForKey("workerExtraInfo") as! PFObject
-        
-        var workTypeArray = workerExtraInfo.objectForKey("workType") as! NSArray
-        var workType = workTypeArray[0] as! String //grab the first job
+//        let workerExtraInfo: PFObject = user?.objectForKey("workerExtraInfo") as! PFObject
+//        
+//        var workTypeArray = workerExtraInfo.objectForKey("workType") as! NSArray
+//        var workType = workTypeArray[0] as! String //grab the first job
         
         
         
         
         userPhoneNumber.text = user?.username
         userFullName.text = fullName
-        userWorkType.text = workType
+//        userWorkType.text = workType
         
 
         
@@ -66,6 +68,70 @@ class UIVC_WorkerSettingsPage: UIViewController {
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
+    @IBAction func longPressOnImage(sender: AnyObject) {
+        
+        userFullName.text = "test"
+        
+        var refreshAlert = UIAlertController(title: "Change Picture", message: "Choose", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Take a Picture", style: .Default, handler: { (action: UIAlertAction!) in
+            
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+            {
+                let imagePicker = UIImagePickerController()
+                
+                imagePicker.delegate = self
+                imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+                imagePicker.mediaTypes = [kUTTypeImage as NSString]
+                imagePicker.allowsEditing = true
+                
+                self.presentViewController(imagePicker, animated: true, completion: nil)
+                
+                //newMedia = true
+            }
+            else
+            {
+                let alertController = UIAlertController(title: "Camera", message:"No camera found :(", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                
+                self.presentViewController(alertController, animated: true, completion: nil)
+            }
+
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Choose a Picture", style: .Default, handler: { (action: UIAlertAction!) in
+            
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.SavedPhotosAlbum) {
+                
+                let imagePicker = UIImagePickerController()
+                
+                imagePicker.delegate = self
+                imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+                imagePicker.mediaTypes = [kUTTypeImage as NSString]
+                imagePicker.allowsEditing = true
+                
+                self.presentViewController(imagePicker, animated: true, completion: nil)
+                
+                //newMedia = false
+            }
+            
+        }))
+        
+        presentViewController(refreshAlert, animated: true, completion: nil)
+
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject])
+    {
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        userImage.image = image
+        
+    }
+
 
     /*
     // MARK: - Navigation
