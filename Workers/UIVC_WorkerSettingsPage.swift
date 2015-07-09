@@ -34,18 +34,30 @@ class UIVC_WorkerSettingsPage: UIViewController, UIImagePickerControllerDelegate
         var fullName = "\(firstName) \(lastName)"
         
         
+        // set up our query for a User object
+        let userQuery = PFUser.query();
+        
+        userQuery?.includeKey("workerExtraInfo");
+        
+        // execute the query
+        userQuery?.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            // objects contains all of the User objects, and their associated Weapon objects, too
+        }
+        
         //get the worker type- returns WorkerExtraInfo Class
-//        let workerExtraInfo: PFObject = user?.objectForKey("workerExtraInfo") as! PFObject
-//        
-//        var workTypeArray = workerExtraInfo.objectForKey("workType") as! NSArray
-//        var workType = workTypeArray[0] as! String //grab the first job
+        var workerExtraInfo: PFObject = PFUser.currentUser()?.objectForKey("workerExtraInfo") as! PFObject
+        workerExtraInfo = workerExtraInfo.fetchIfNeeded()!
+        
+        var workTypeArray = workerExtraInfo["workType"] as! NSArray
+        var workType = workTypeArray[0] as! String //grab the first job
         
         
         
         
         userPhoneNumber.text = user?.username
         userFullName.text = fullName
-//        userWorkType.text = workType
+        userWorkType.text = workType
         
 
         
