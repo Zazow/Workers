@@ -36,9 +36,9 @@
 		89AEB0861B46082A0059BD9A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 89AEB0851B46082A0059BD9A /* libsqlite3.dylib */; };
 		89E3DA211B4712E90045DDC5 /* UIVC_RegistrationPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3DA201B4712E90045DDC5 /* UIVC_RegistrationPage1.swift */; };
 		89E3DA231B4714260045DDC5 /* UIVC_RegistrationPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3DA221B4714260045DDC5 /* UIVC_RegistrationPage2.swift */; };
-		AE6F92DA1B4EF1CA008550F4 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6F92D91B4EF1C9008550F4 /* ParseUI.framework */; };
 		AE6F92DC1B4EF33F008550F4 /* UIVC_WorkerRequestsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F92DB1B4EF33F008550F4 /* UIVC_WorkerRequestsTable.swift */; };
 		AE6F92DE1B4F29E5008550F4 /* UIVC_WorkerRequestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F92DD1B4F29E5008550F4 /* UIVC_WorkerRequestDetail.swift */; };
+		AE6F92E51B533B00008550F4 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6F92E41B533B00008550F4 /* ParseUI.framework */; };
 		AE7664A81B49A46F00448FDD /* UIVC_WorkerSettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7664A71B49A46F00448FDD /* UIVC_WorkerSettingsPage.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,9 +84,9 @@
 		89AEB0851B46082A0059BD9A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		89E3DA201B4712E90045DDC5 /* UIVC_RegistrationPage1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVC_RegistrationPage1.swift; sourceTree = "<group>"; };
 		89E3DA221B4714260045DDC5 /* UIVC_RegistrationPage2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVC_RegistrationPage2.swift; sourceTree = "<group>"; };
-		AE6F92D91B4EF1C9008550F4 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = ../../Downloads/ParseUI.framework; sourceTree = "<group>"; };
 		AE6F92DB1B4EF33F008550F4 /* UIVC_WorkerRequestsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVC_WorkerRequestsTable.swift; sourceTree = "<group>"; };
 		AE6F92DD1B4F29E5008550F4 /* UIVC_WorkerRequestDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVC_WorkerRequestDetail.swift; sourceTree = "<group>"; };
+		AE6F92E41B533B00008550F4 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		AE7664A71B49A46F00448FDD /* UIVC_WorkerSettingsPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVC_WorkerSettingsPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,12 +96,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				89AEB0861B46082A0059BD9A /* libsqlite3.dylib in Frameworks */,
+				AE6F92E51B533B00008550F4 /* ParseUI.framework in Frameworks */,
 				89AEB0841B4608200059BD9A /* libz.dylib in Frameworks */,
 				89AEB0821B4608140059BD9A /* SystemConfiguration.framework in Frameworks */,
 				89AEB0801B46080E0059BD9A /* StoreKit.framework in Frameworks */,
 				89AEB07E1B4608070059BD9A /* Social.framework in Frameworks */,
 				89AEB07C1B4608010059BD9A /* Security.framework in Frameworks */,
-				AE6F92DA1B4EF1CA008550F4 /* ParseUI.framework in Frameworks */,
 				89AEB07A1B4607FB0059BD9A /* QuartzCore.framework in Frameworks */,
 				89AEB0781B4607F50059BD9A /* MobileCoreServices.framework in Frameworks */,
 				89AEB0761B4607EE0059BD9A /* CoreLocation.framework in Frameworks */,
@@ -129,7 +129,7 @@
 		89503E231B4604FA00A310C1 = {
 			isa = PBXGroup;
 			children = (
-				AE6F92D91B4EF1C9008550F4 /* ParseUI.framework */,
+				AE6F92E41B533B00008550F4 /* ParseUI.framework */,
 				89AEB0851B46082A0059BD9A /* libsqlite3.dylib */,
 				89AEB0831B4608200059BD9A /* libz.dylib */,
 				89AEB0811B4608140059BD9A /* SystemConfiguration.framework */,
